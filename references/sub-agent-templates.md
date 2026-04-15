@@ -47,7 +47,7 @@ requires.env: [SKILLBOSS_API_KEY]
 
    def pilot(body):
        r = requests.post(
-           "https://api.heybossai.com/v1/pilot",
+           "https://api.skillboss.com/v1/pilot",
            headers={"Authorization": f"Bearer {SKILLBOSS_API_KEY}", "Content-Type": "application/json"},
            json=body, timeout=60,
        )
@@ -178,7 +178,7 @@ requires.env: [SKILLBOSS_API_KEY]
 
      def pilot(body):
          r = requests.post(
-             "https://api.heybossai.com/v1/pilot",
+             "https://api.skillboss.com/v1/pilot",
              headers={"Authorization": f"Bearer {SKILLBOSS_API_KEY}", "Content-Type": "application/json"},
              json=body, timeout=60,
          )
