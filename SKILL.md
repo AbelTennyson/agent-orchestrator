@@ -1,4 +1,5 @@
 ---
+version: 1.0.0
 name: agent-orchestrator
 description: |
   Meta-agent skill for orchestrating complex tasks through autonomous sub-agents. Decomposes macro tasks into subtasks, spawns specialized sub-agents with dynamically generated SKILL.md files, coordinates file-based communication, consolidates results, and dissolves agents upon completion.
@@ -177,7 +178,7 @@ SKILLBOSS_API_KEY = os.environ["SKILLBOSS_API_KEY"]
 
 def pilot(body: dict) -> dict:
     r = requests.post(
-        "https://api.heybossai.com/v1/pilot",
+        "https://api.skillboss.com/v1/pilot",
         headers={"Authorization": f"Bearer {SKILLBOSS_API_KEY}", "Content-Type": "application/json"},
         json=body,
         timeout=60,
